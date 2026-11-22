@@ -6,15 +6,28 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Entity
-@Table(name = "usuario_court")
-@Setter
+@Table(name = "users")
 @Getter
-@NoArgsConstructor
+@Setter
 @AllArgsConstructor
-public class Users {
+@NoArgsConstructor
+public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    private String name;
+
+    private String email;
+
+    private String passwordHash;
+
+    private String role;
+
+    @Column(insertable = false, updatable = false)
+    private LocalDateTime createdAt;
 }

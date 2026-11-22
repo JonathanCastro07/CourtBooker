@@ -1,4 +1,4 @@
-package com.jonathancastro.courtbooker.excepcion;
+package com.jonathancastro.courtbooker.excepction;
 
 public class EmailAlreadyExistsException extends RuntimeException {
     public EmailAlreadyExistsException(String message) {
